@@ -20,9 +20,10 @@
 	<div class="cloud_check">
 		<b><em>Monitor Cloud:</em></b>
 
-		<div type="cloud_check" cloud_compare="equal" cloud_action="run_slot">
+		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
 				<input type=text id="cloud_name" value="command">
 				<input type=text id="cloud_value" value="Start">
+				<input type=text id="cloud_action_val" value="0">
 				<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from spike.control import wait_for_seconds, wait_until, Timer
@@ -74,7 +75,7 @@ while correct:
 
 		<div type="cloud_check" cloud_compare="changes" cloud_action="download_code">
 				<input type=text id="cloud_name" value="color_sequence">
-				<input type=text id="cloud_action_val" value="0">
+				<input type=text id="cloud_action_val" value="1">
 				<textarea id="cloud_code">
 				</textarea>
 			<input type=text id="cloud_reset" value="">
