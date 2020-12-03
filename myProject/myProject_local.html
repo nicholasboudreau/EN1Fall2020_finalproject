@@ -23,8 +23,49 @@
 		<div type="cloud_check" cloud_compare="equal" cloud_action="run_slot">
 				<input type=text id="cloud_name" value="command">
 				<input type=text id="cloud_value" value="Start">
-				<input type=text id="cloud_action_val" value="0">
+				<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+from spike.control import wait_for_seconds, wait_until, Timer
+
+hub = PrimeHub()
+
+green = DistanceSensor('A')
+red = DistanceSensor('B')
+yellow = DistanceSensor('C')
+blue = DistanceSensor('D')
+
+game = ['Y', 'B', 'G', 'R', 'B', 'R', 'G', 'Y', 'G', 'B']
+
+count = 0
+
+correct = True
+
+while correct:
+    while len(game) > count:
+        if game[count] == 'G':
+            green.light_up_all()
+            wait_for_seconds(.6)
+            green.light_up_all(0)
+            wait_for_seconds(.3)
+        elif game[count] == 'R':
+            red.light_up_all()
+            wait_for_seconds(.6)
+            red.light_up_all(0)
+            wait_for_seconds(.3)
+        elif game[count] == 'Y':
+            yellow.light_up_all()
+            wait_for_seconds(.6)
+            yellow.light_up_all(0)
+            wait_for_seconds(.3)
+        elif game[count] == 'B':
+            blue.light_up_all()
+            wait_for_seconds(.6)
+            blue.light_up_all(0)
+            wait_for_seconds(.3)
+        count = count + 1 </textarea>
+			<input type=text id="cloud_reset" value="">
 		</div>
+
 
 		<div type="cloud_check" cloud_compare="equal" cloud_action="stop_slot">
 		    <input type=text id="cloud_name" value="command">
