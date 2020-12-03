@@ -20,8 +20,19 @@
 	<div class="cloud_check">
 		<b><em>Monitor Cloud:</em></b>
 
+		<div type="cloud_check" cloud_compare="equal" cloud_action="run_slot">
+				<input type=text id="cloud_name" value="command">
+				<input type=text id="cloud_value" value="Start">
+				<input type=text id="cloud_action_val" value="0">
+		</div>
+
+		<div type="cloud_check" cloud_compare="equal" cloud_action="stop_slot">
+		    <input type=text id="cloud_name" value="command">
+		    <input type=text id="cloud_value" value="Stop">
+		</div>
+
 		<div type="cloud_check" cloud_compare="changes" cloud_action="download_code">
-				<input type=text id="cloud_name" value="sequence">
+				<input type=text id="cloud_name" value="color_sequence">
 				<input type=text id="cloud_action_val" value="0">
 				<textarea id="cloud_code">
 				</textarea>
