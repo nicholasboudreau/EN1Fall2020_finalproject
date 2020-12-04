@@ -11,7 +11,7 @@
 //   Cloud API Key in your code/within GitHub
 // - if you leave this blank ("") then code assumes you
 //   are using method #2 below
-var getAPIusername = "Nicholas Boudreau"; // fill in with your name (if left blank, assuming using method #2)
+var getAPIusername = ""; // fill in with your name (if left blank, assuming using method #2)
 
 // (2) Hardcode your API key information here
 

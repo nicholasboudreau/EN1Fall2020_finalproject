@@ -11,7 +11,34 @@
 <body>
 
 	<!-- SERVICE DOCK -->
-	
+	<div id="servicedock">
+    <service-airtable id="service_airtable" tablename="finalProject"></service-airtable>
+  </div>
+
+
+	<h1>Simon Memory Game</h1>
+
+  <h2>Remote Interface</h2>
+
+  <p>1. Generate Random Sequence</p>
+
+  <button cloud_action='update' cloud_name='command'>Generate</button>
+
+  <p>2. Show Sequence</p>
+
+  <button cloud_action='update' cloud_name='command'>Show</button>
+
+  <p>3. Guess Sequence</p>
+
+  <form cloud_form='input'>
+    <input type=text cloud_action='update' cloud_name='sequence_guess' value=''>
+    <input type='Submit'>
+  </form>
+
+  <p>4. If you got it right: go back to step #2 to see more of the sequence.</p>
+
+  <p>5. Else, if you got it wrong: either try again with this sequence or go back to step #1 to start over with a new sequence.</p
+
 
 	<h2>My Project Quick Links:</h2>
   <p>
