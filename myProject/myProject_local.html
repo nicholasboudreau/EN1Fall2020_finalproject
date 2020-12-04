@@ -21,7 +21,7 @@
 				// - create a random sequence that is 20 numbers long
 				var new_sequence = "";
 				for (var i=0; i<20; i++) {
-					new_sequence += getRandomInt(9).toString();
+					new_sequence += getRandomInt(4).toString();
 				}
 				cloud_update("sequence",new_sequence); // update the cloud
 				// 3. run a program on the SPIKE Prime in Slot 0
@@ -77,20 +77,20 @@
 			<input type=text id="cloud_value" value="Show">
 			<input type=text id="cloud_action_val" value="1">
 			<textarea id="cloud_code"># SHOW SEQUENCE
-	from spike import PrimeHub
-	from spike.control import wait_for_seconds
-	hub = PrimeHub()
-	length = CLOUD[current_length] # length to show
-	sequence = 'CLOUD[sequence]' # sequence string
-	sequence = sequence[0:length] # substring of size length
-	hub.light_matrix.write('Length: ' + str(length))
-	hub.light_matrix.write('Sequence:')
-	for character in sequence:
-		hub.light_matrix.write(character)
-		wait_for_seconds(0.25)
-		hub.light_matrix.off()
-		wait_for_seconds(0.25)
+from spike import PrimeHub
+from spike.control import wait_for_seconds
+hub = PrimeHub()
+length = CLOUD[current_length] # length to show
+sequence = 'CLOUD[sequence]' # sequence string
+sequence = sequence[0:length] # substring of size length
+hub.light_matrix.write('Length: ' + str(length))
+hub.light_matrix.write('Sequence:')
+for character in sequence:
+	hub.light_matrix.write(character)
+	wait_for_seconds(0.25)
 	hub.light_matrix.off()
+	wait_for_seconds(0.25)
+hub.light_matrix.off()
 	</textarea>
 			<input type=text id="cloud_reset" value="">
 		</div>
