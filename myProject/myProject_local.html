@@ -77,19 +77,39 @@
 			<input type=text id="cloud_value" value="Show">
 			<input type=text id="cloud_action_val" value="1">
 			<textarea id="cloud_code"># SHOW SEQUENCE
-from spike import PrimeHub
+from spike import PrimeHub, DistanceSensor
 from spike.control import wait_for_seconds
 hub = PrimeHub()
+green = DistanceSensor('A')
+red = DistanceSensor('B')
+yellow = DistanceSensor('C')
+blue = DistanceSensor('D')
 length = CLOUD[current_length] # length to show
 sequence = 'CLOUD[sequence]' # sequence string
 sequence = sequence[0:length] # substring of size length
 hub.light_matrix.write('Length: ' + str(length))
 hub.light_matrix.write('Sequence:')
 for character in sequence:
-	hub.light_matrix.write(character)
-	wait_for_seconds(0.25)
-	hub.light_matrix.off()
-	wait_for_seconds(0.25)
+	if character == 0:
+		green.light_up_all()
+		wait_for_seconds(.6)
+		green.light_up_all(0)
+		wait_for_seconds(.3)
+	elif character == 1:
+		red.light_up_all()
+		wait_for_seconds(.6)
+		red.light_up_all(0)
+		wait_for_seconds(.3)
+	elif character == 2:
+		yellow.light_up_all()
+		wait_for_seconds(.6)
+		yellow.light_up_all(0)
+		wait_for_seconds(.3)
+	elif character == 3:
+		blue.light_up_all()
+		wait_for_seconds(.6)
+		blue.light_up_all(0)
+		wait_for_seconds(.3)
 hub.light_matrix.off()
 	</textarea>
 			<input type=text id="cloud_reset" value="">
