@@ -76,48 +76,47 @@
 			<input type=text id="cloud_name" value="command">
 			<input type=text id="cloud_value" value="Show">
 			<input type=text id="cloud_action_val" value="1">
-			<textarea id="cloud_code">
-				# SHOW SEQUENCE
-				from spike import PrimeHub, DistanceSensor
-				from spike.control import wait_for_seconds
+			<textarea id="cloud_code"># SHOW SEQUENCE
+from spike import PrimeHub, DistanceSensor
+from spike.control import wait_for_seconds
 
-				hub = PrimeHub()
+hub = PrimeHub()
 
-				green = DistanceSensor('A')
-				red = DistanceSensor('B')
-				yellow = DistanceSensor('C')
-				blue = DistanceSensor('D')
+green = DistanceSensor('A')
+red = DistanceSensor('B')
+yellow = DistanceSensor('C')
+blue = DistanceSensor('D')
 
-				length = CLOUD[current_length] # length to show
-				sequence = 'CLOUD[sequence]' # sequence string
-				sequence = sequence[0:length] # substring of size length
+length = CLOUD[current_length] # length to show
+sequence = 'CLOUD[sequence]' # sequence string
+sequence = sequence[0:length] # substring of size length
 
-				hub.light_matrix.write('Length: ' + str(length))
-				hub.light_matrix.write('Sequence:')
+hub.light_matrix.write('Length: ' + str(length))
+hub.light_matrix.write('Sequence:')
 
-				for character in sequence:
-				    if character == 0:
-						green.light_up_all()
-						wait_for_seconds(1)
-						green.light_up_all(0)
-						wait_for_seconds(.3)
-					if character == 1:
-						red.light_up_all()
-						wait_for_seconds(1)
-						red.light_up_all(0)
-						wait_for_seconds(.3)
-					if character == 2:
-						yellow.light_up_all()
-						wait_for_seconds(1)
-						yellow.light_up_all(0)
-						wait_for_seconds(.3)
-					if character == 3:
-						blue.light_up_all()
-						wait_for_seconds(1)
-						blue.light_up_all(0)
-						wait_for_seconds(.3)
+for character in sequence:
+				if character == 0:
+				green.light_up_all()
+				wait_for_seconds(1)
+				green.light_up_all(0)
+				wait_for_seconds(.3)
+if character == 1:
+				red.light_up_all()
+				wait_for_seconds(1)
+				red.light_up_all(0)
+				wait_for_seconds(.3)
+if character == 2:
+				yellow.light_up_all()
+				wait_for_seconds(1)
+				yellow.light_up_all(0)
+				wait_for_seconds(.3)
+if character == 3:
+				blue.light_up_all()
+				wait_for_seconds(1)
+				blue.light_up_all(0)
+				wait_for_seconds(.3)
 
-				hub.light_matrix.write('Done')
+hub.light_matrix.write('Done')
 	</textarea>
 			<input type=text id="cloud_reset" value="">
 		</div>
