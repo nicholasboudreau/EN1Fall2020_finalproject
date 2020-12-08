@@ -21,7 +21,7 @@
 				// - create a random sequence that is 20 numbers long
 				var new_sequence = "";
 				for (var i=0; i<20; i++) {
-					new_sequence += getRandomInt(4).toString();
+					new_sequence += ['R','G','B','Y'][getRandomInt(4)];
 				}
 				cloud_update("sequence",new_sequence); // update the cloud
 				// 3. run a program on the SPIKE Prime in Slot 0
@@ -76,8 +76,7 @@
 			<input type=text id="cloud_name" value="command">
 			<input type=text id="cloud_value" value="Show">
 			<input type=text id="cloud_action_val" value="1">
-			<textarea id="cloud_code"># SHOW SEQUENCE
-from spike import PrimeHub, DistanceSensor
+			<textarea id="cloud_code">from spike import PrimeHub, DistanceSensor
 from spike.control import wait_for_seconds
 
 hub = PrimeHub()
@@ -95,26 +94,26 @@ hub.light_matrix.write('Length: ' + str(length))
 hub.light_matrix.write('Sequence:')
 
 for character in sequence:
-	if character == 0:
-	green.light_up_all()
-	wait_for_seconds(1)
-	green.light_up_all(0)
-	wait_for_seconds(.3)
-if character == 1:
-	red.light_up_all()
-	wait_for_seconds(1)
-	red.light_up_all(0)
-	wait_for_seconds(.3)
-if character == 2:
-	yellow.light_up_all()
-	wait_for_seconds(1)
-	yellow.light_up_all(0)
-	wait_for_seconds(.3)
-if character == 3:
-	blue.light_up_all()
-	wait_for_seconds(1)
-	blue.light_up_all(0)
-	wait_for_seconds(.3)
+  if character == 'G':
+		green.light_up_all()
+		wait_for_seconds(.6)
+		green.light_up_all(0)
+		wait_for_seconds(.3)
+	if character == 'R':
+		red.light_up_all()
+		wait_for_seconds(.6)
+		red.light_up_all(0)
+		wait_for_seconds(.3)
+	if character == 'Y':
+		yellow.light_up_all()
+		wait_for_seconds(.6)
+		yellow.light_up_all(0)
+		wait_for_seconds(.3)
+	if character == 'B':
+		blue.light_up_all()
+		wait_for_seconds(.6)
+		blue.light_up_all(0)
+		wait_for_seconds(.3)
 
 hub.light_matrix.write('Done')
 	</textarea>
