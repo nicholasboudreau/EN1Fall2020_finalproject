@@ -95,26 +95,26 @@ hub.light_matrix.write('Length: ' + str(length))
 hub.light_matrix.write('Sequence:')
 
 for character in sequence:
-				if character == 0:
-				green.light_up_all()
-				wait_for_seconds(1)
-				green.light_up_all(0)
-				wait_for_seconds(.3)
+	if character == 0:
+	green.light_up_all()
+	wait_for_seconds(1)
+	green.light_up_all(0)
+	wait_for_seconds(.3)
 if character == 1:
-				red.light_up_all()
-				wait_for_seconds(1)
-				red.light_up_all(0)
-				wait_for_seconds(.3)
+	red.light_up_all()
+	wait_for_seconds(1)
+	red.light_up_all(0)
+	wait_for_seconds(.3)
 if character == 2:
-				yellow.light_up_all()
-				wait_for_seconds(1)
-				yellow.light_up_all(0)
-				wait_for_seconds(.3)
+	yellow.light_up_all()
+	wait_for_seconds(1)
+	yellow.light_up_all(0)
+	wait_for_seconds(.3)
 if character == 3:
-				blue.light_up_all()
-				wait_for_seconds(1)
-				blue.light_up_all(0)
-				wait_for_seconds(.3)
+	blue.light_up_all()
+	wait_for_seconds(1)
+	blue.light_up_all(0)
+	wait_for_seconds(.3)
 
 hub.light_matrix.write('Done')
 	</textarea>
