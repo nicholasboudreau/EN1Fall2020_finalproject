@@ -76,7 +76,8 @@
 			<input type=text id="cloud_name" value="command">
 			<input type=text id="cloud_value" value="Show">
 			<input type=text id="cloud_action_val" value="1">
-			<textarea id="cloud_code">from spike import PrimeHub, DistanceSensor
+			<textarea id="cloud_code">
+from spike import PrimeHub, DistanceSensor
 from spike.control import wait_for_seconds
 
 hub = PrimeHub()
@@ -94,22 +95,22 @@ hub.light_matrix.write('Length: ' + str(length))
 hub.light_matrix.write('Sequence:')
 
 for character in sequence:
-  if character == 'G':
-		green.light_up_all()
+	if character == 'G':
+  	green.light_up_all()
 		wait_for_seconds(.6)
 		green.light_up_all(0)
 		wait_for_seconds(.3)
-	if character == 'R':
+	elif character == 'R':
 		red.light_up_all()
 		wait_for_seconds(.6)
 		red.light_up_all(0)
 		wait_for_seconds(.3)
-	if character == 'Y':
+	elif character == 'Y':
 		yellow.light_up_all()
 		wait_for_seconds(.6)
 		yellow.light_up_all(0)
 		wait_for_seconds(.3)
-	if character == 'B':
+	elif character == 'B':
 		blue.light_up_all()
 		wait_for_seconds(.6)
 		blue.light_up_all(0)
