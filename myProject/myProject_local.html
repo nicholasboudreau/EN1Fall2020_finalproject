@@ -63,7 +63,7 @@
 	<div class="cloud_check">
 		<b><em>Monitor Cloud:</em></b>
 
-		<p style="color: red;">1. If they click Generate button: generate a new sequence.</p>
+		<p style="color: red;">GENERATE NEW SEQUENCE</p>
 		<div type="cloud_check" cloud_compare="equal" cloud_action="run_js">
 			<input type=text id="cloud_name" value="command">
 			<input type=text id="cloud_value" value="Generate">
@@ -71,7 +71,7 @@
 			<input type=text id="cloud_reset" value="">
 		</div>
 
-		<p style="color: red;">2. If they click Show button: show a portion of the sequence.</p>
+		<p style="color: red;">SHOW SEQUENCE</p>
 		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
 			<input type=text id="cloud_name" value="command">
 			<input type=text id="cloud_value" value="Show">
@@ -121,7 +121,7 @@ hub.light_matrix.write('Done')
 			<input type=text id="cloud_reset" value="">
 		</div>
 
-		<p style="color: red;">3. If they submit a guess, compare to actual sequence.</p>
+		<p style="color: red;">GUESS SEQUENCE</p>
 		<div type="cloud_check" cloud_compare="changes" cloud_action="run_js">
 			<input type=text id="cloud_name" value="sequence_guess">
 			<input type=text id="cloud_action_val" value="compare_sequence">
