@@ -2,6 +2,9 @@
 	<title>My Project (Remote)</title>
 	<head>
 		<style>
+			p {
+				font-size: 24px;
+			}
 		</style>
 		<script src="https://cdn.jsdelivr.net/gh/tuftsceeo/SPIKE-Web-Interface/cdn/ServiceDock.js" charset="utf-8"></script>
 	  <script src="../src/secret.js" charset="utf-8"></script>
@@ -20,7 +23,7 @@
 
   <h2>Remote Interface</h2>
 
-  <p>1. Generate Random Sequence</p>
+  <p>GENERATE NEW SEQUENCE</p>
 
   <button cloud_action='update' cloud_name='command'>Generate</button>
 
@@ -31,7 +34,7 @@
   <p>3. Guess Sequence</p>
 
   <form cloud_form='input'>
-    <input type=text cloud_action='update' cloud_name='sequence_guess' onfocus="this.value=''" value=''>
+    <input type=text style="font-size:18pt;height:420px;width:200px;" cloud_action='update' cloud_name='sequence_guess' onfocus="this.value=''" value=''>
     <input type='Submit'>
   </form>
 
