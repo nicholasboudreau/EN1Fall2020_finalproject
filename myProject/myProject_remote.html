@@ -23,24 +23,24 @@
 
   <h2>Remote Interface</h2>
 
-  <p>GENERATE NEW SEQUENCE</p>
+  <p>1. Generate New Sequence:</p>
 
-  <button cloud_action='update' cloud_name='command'>Generate</button>
+  <button style="width:70px;height:35px;" cloud_action='update' cloud_name='command'>New Game</button>
 
   <p>2. Show Sequence</p>
 
-  <button cloud_action='update' cloud_name='command'>Show</button>
+  <button style="width:70px;height:35px;" cloud_action='update' cloud_name='command'>Display Sequence</button>
 
   <p>3. Guess Sequence</p>
 
   <form cloud_form='input'>
-    <input type=text style="font-size:18pt;height:420px;width:200px;" cloud_action='update' cloud_name='sequence_guess' onfocus="this.value=''" value=''>
+    <input type=text style="font-size:18pt;height:150px;width:350px;" cloud_action='update' cloud_name='sequence_guess' onfocus="this.value=''" value=''>
     <input type='Submit'>
   </form>
 
-  <p>4. If you got it right: go back to step #2 to see more of the sequence.</p>
+  <h2>If you see a CHECK: Repeat Step 2</h2>
 
-  <p>5. Else, if you got it wrong: either try again with this sequence or go back to step #1 to start over with a new sequence.</p
+  <h2>If you see an X: Repeat Step 1 and play again.</h2>
 
 
 	<h2>My Project Quick Links:</h2>
