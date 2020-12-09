@@ -37,13 +37,13 @@
 				if (current_sequence.substring(0, current_length) == current_guess) {
 					// it's a match!
 					// 1. show that it's a match
-					mySPIKE.PrimeHub().light_matrix.show_image('YES');
+					mySPIKE.PrimeHub().light_matrix.write('YES!');
 					// 2. increment the length by one (so next round is one longer)
 					cloud_update("current_length",(current_length+1).toString())
 				} else {
 					// it's NOT a match!
 					// 1. show that it's not a match
-					mySPIKE.PrimeHub().light_matrix.show_image('NO');
+					mySPIKE.PrimeHub().light_matrix.write('WRONG!')
 				}
 			}
 		</script>
