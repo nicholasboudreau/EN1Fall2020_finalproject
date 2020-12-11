@@ -9,6 +9,15 @@
 			body {
   			background-color: beige;
 			}
+
+			.gen {
+  			transition-duration: 0.4s;
+			}
+
+			.gen:hover {
+  			background-color: #4CAF50; /* Green */
+  			color: white;
+			}
 		</style>
 		<script src="https://cdn.jsdelivr.net/gh/tuftsceeo/SPIKE-Web-Interface/cdn/ServiceDock.js" charset="utf-8"></script>
 	  <script src="../src/secret.js" charset="utf-8"></script>
@@ -37,11 +46,11 @@
 
   <p>1. Generate New Sequence:</p>
 
-  <button style="font-family:helvetica;font-size:26px;width:150px;height:50px;" cloud_action='update' cloud_name='command'>Generate</button>
+  <button class="gen" style="font-family:helvetica;font-size:26px;width:150px;height:50px;" cloud_action='update' cloud_name='command'>Generate</button>
 
   <p>2. Show Sequence</p>
 
-  <button style="font-family:helvetica;font-size:26px;width:150px;height:50px;" cloud_action='update' cloud_name='command'>Show</button>
+  <button class="show" style="font-family:helvetica;font-size:26px;width:150px;height:50px;" cloud_action='update' cloud_name='command'>Show</button>
 
   <p>3. Guess Sequence</p>
 	<p>(Type G for Green, R for Red, Y for Yellow, B for Blue)</p>
