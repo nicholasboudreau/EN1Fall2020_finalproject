@@ -92,27 +92,26 @@ sequence = 'CLOUD[sequence]' # sequence string
 sequence = sequence[0:length] # substring of size length
 
 hub.light_matrix.write('Length: ' + str(length))
-hub.light_matrix.write('Sequence:')
 
 for character in sequence:
 	if character == 'G':
 		green.light_up_all()
-		wait_for_seconds(.6)
+		wait_for_seconds(.4)
 		green.light_up_all(0)
 		wait_for_seconds(.3)
 	if character == 'R':
 		red.light_up_all()
-		wait_for_seconds(.6)
+		wait_for_seconds(.4)
 		red.light_up_all(0)
 		wait_for_seconds(.3)
 	if character == 'Y':
 		yellow.light_up_all()
-		wait_for_seconds(.6)
+		wait_for_seconds(.4)
 		yellow.light_up_all(0)
 		wait_for_seconds(.3)
 	if character == 'B':
 		blue.light_up_all()
-		wait_for_seconds(.6)
+		wait_for_seconds(.4)
 		blue.light_up_all(0)
 		wait_for_seconds(.3)
 
