@@ -92,6 +92,7 @@ sequence = 'CLOUD[sequence]' # sequence string
 sequence = sequence[0:length] # substring of size length
 
 hub.light_matrix.write('L = ' + str(length))
+wait_for_seconds(1)
 
 for character in sequence:
 	if character == 'G':
